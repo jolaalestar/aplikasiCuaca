@@ -1,0 +1,142 @@
+/* Reset dan style dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative; /* Penting untuk positioning background */
+}
+
+/* Bagian untuk background image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/background-bantuan.jpg'); /* Ganti dengan path gambar Anda */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.8; /* Atur transparansi gambar */
+}
+
+/* Dashboard utama */
+.main-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Menambah transparansi */
+    border-radius: 30px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 20px;
+    backdrop-filter: blur(5px); /* Menambah efek blur di belakang konten */
+}
+
+/* Header */
+header {
+    background-color: rgba(77, 166, 255, 0.9); /* Biru muda dengan transparansi */
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Sisanya tetap sama seperti sebelumnya */
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Form pencarian */
+form {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #4da6ff;
+    border-radius: 25px;
+    width: 70%;
+    margin-right: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4da6ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3385ff;
+}
+
+/* Pesan */
+#pesan-1, #pesan-2 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4da6ff;
+}
+
+/* Navigasi */
+.nav-penjelasan {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.nav-penjelasan a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: rgba(102, 179, 255, 0.8);
+    transition: background-color 0.3s;
+}
+
+.nav-penjelasan a:hover {
+    background-color: rgba(51, 133, 255, 0.9);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #4da6ff;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+/* Responsivitas */
+@media (max-width: 600px) {
+    .main-content, header {
+        width: 95%;
+    }
+
+    input[type="text"] {
+        width: 60%;
+    }
+}

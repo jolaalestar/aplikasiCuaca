@@ -1,0 +1,176 @@
+/* Reset margin, padding, dan box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cce0f0; /* Latar belakang biru pastel */
+    position: relative;
+}
+
+/* Gambar latar belakang dengan efek transisi */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/path/to/night-sky-image.jpg'); /* Ganti dengan gambar langit malam yang sesuai */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.8);
+    z-index: -1;
+    transition: transform 10s ease, filter 5s ease;
+}
+
+/* Tampilan utama dengan efek cahaya */
+.main-content {
+    text-align: center;
+    background-color: #eaf6fa; /* Latar belakang putih lembut */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    animation: glowEffect 2s infinite alternate;
+}
+
+/* Keyframes untuk efek glow berdenyut */
+@keyframes glowEffect {
+    from {
+        box-shadow: 0 0 20px rgba(136, 177, 204, 0.4), 0 0 30px rgba(102, 138, 153, 0.3);
+    }
+    to {
+        box-shadow: 0 0 40px rgba(136, 177, 204, 0.7), 0 0 60px rgba(102, 138, 153, 0.5);
+    }
+}
+
+/* Formulir dan input field */
+form {
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #88b1cc;
+    width: 300px;
+    margin-right: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #668a99;
+    box-shadow: 0 0 5px rgba(136, 177, 204, 0.5);
+    outline: none;
+}
+
+/* Tombol dengan efek hover */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #88b1cc;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #668a99;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Pesan */
+#pesan-1, #pesan-2 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #445c7f;
+}
+
+/* Efek glow pada judul */
+h1 {
+    color: #445c7f; /* Warna teks biru gelap untuk judul */
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 36px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #88b1cc, 0 0 20px #88b1cc, 0 0 30px #88b1cc;
+    }
+    to {
+        text-shadow: 0 0 20px #668a99, 0 0 30px #668a99, 0 0 40px #668a99;
+    }
+}
+
+/* Keyframes untuk efek fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header dengan gradient dan border */
+header {
+    background: linear-gradient(90deg, #88b1cc, #668a99);
+    padding: 30px;
+    text-align: center;
+    border-bottom: 5px solid white;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Navigasi penjelasan */
+.nav-penjelasan {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-penjelasan a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-penjelasan a:hover {
+    background-color: #668a99;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #88b1cc;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
