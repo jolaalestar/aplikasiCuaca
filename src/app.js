@@ -83,4 +83,4 @@ app.get('*', (req, res) => {
 // Jalankan server
 app.listen(port, () => {
     console.log('Server berjalan pada port '+ port);
-});
+})
