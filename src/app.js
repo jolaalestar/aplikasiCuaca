@@ -6,6 +6,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/prediksiCuaca');
+const axios =require("axios");
 
 // Set view engine
 app.set('view engine', 'hbs');
@@ -58,6 +59,34 @@ app.get('/tentang', (req, res) => {
     });
 });
 
+//Halaman Berita
+app.get("/berita", async (req, res) => {
+    try {
+      const urlApiMediaStack = "https://api.mediastack.com/v1/news";
+      const apiKey = "cae4647fef517546e6d70e2bd7c195ab";
+  
+      const params = {
+        access_key: apiKey,
+        countries: "id",
+      };
+  
+      const response = await axios.get(urlApiMediaStack, { params });
+      const dataBerita = response.data;
+  
+      res.render("berita", {
+        name: "Yola Lestari",
+        title: "News Update",
+        berita: dataBerita.data,
+      });
+    } catch (error) {
+      console.error(error);
+      res.render("error", {
+        title: "Terjadi Kesalahan",
+        pesanKesalahan: "Terjadi kesalahan saat mengambil berita.",
+      });
+    }
+  });
+
 // Rute untuk halaman bantuan
 app.get('/bantuan', (req, res) => {
     res.render('bantuan', {
@@ -71,6 +100,8 @@ app.get('/penjelasan', (req, res) => {
         judul: 'Penjelasan Aplikasi Cek Cuaca'
     });
 });
+
+
 
 // Wildcard route untuk halaman tidak ditemukan
 app.get('*', (req, res) => {

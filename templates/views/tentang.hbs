@@ -1,20 +1,68 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{judul}}</title>
-    <link rel="icon" href="/img/cuaca.png">
-    <link rel="stylesheet" href="/css/styles-tentang.css"> <!-- Menghubungkan dengan CSS baru -->
-</head>
-<body>
-    <div class="background-image"></div>
-    <div class="main-content">
-        {{>header}} <!-- Menyertakan header -->
-        <img src="/img/yolalestari.jpg" alt="Foto pengembang" class="profile-pic">
-        <p>Dikembangkan oleh <strong>{{nama}}</strong></p>
-        <p>"Cek cuaca sekarang untuk merencanakan aktivitasmu nanti!"</p>
-    </div>
-    <script src="/js/app.js"></script>
-</body>
+
+<html>
+    <head>
+        <title>Who Am I?</title>
+        <link rel="icon" href="/img/weather-icon.png">
+        <link rel="stylesheet" href="/css/styles-tentang1.css">
+    </head>
+    <body>
+        {{>header}}
+        <div class="main-content-tentang">
+            <img class="profile" src="/img/yolalestari.jpg">
+            <div class="text">
+                <h2>YOLA LESTARI</h2>
+                <p>
+                    Seorang mahasiswa informatika angkatan 2022 Universitas Negeri Padang seorang
+                    individu yang memiliki semangat dan dedikasi tinggi terhadap dunia teknologi Secara
+                    khusus, saya memiliki ketertarikan mendalam dengan bagaimana sistem pada
+                    komputer dan jaringannya bekerja. Saya suka mempelajari hal baru yang menarik
+                    perhatian saya dan turut mencobanya untuk beberapa kali kesempatan. 
+                </p>
+                <br>
+            </div>
+        </div>
+        <div class="isian-bawah">
+            <div class="biodata-pendidikan">
+
+            <h2>BIODATA</h2>
+            <li>
+                Nama &nbsp;&nbsp;&nbsp; : Yola Lestari
+            </li>
+            <li>
+                Alamat &nbsp;&nbsp;&nbsp;: Kabun Tapakih, Kec.Ulakan Tapakih, 
+                Kab.Padang Pariaman
+            </li>
+            <br>
+            <h2>PENDIDIKAN</h2>
+            <li>
+                <b>UNIVERSITAS NEGERI PADANG</b>
+            </li>
+            <p>
+                S1 - Teknik Informatika (2022-Sekarang)
+            </p>
+
+            </div>
+            <div class="keterampilan">
+            <h2>KETERAMPILAN</h2>
+                <li><b>Programming Languages</b></li>
+                    <p>
+                        C, C++, Python
+                    </p>
+
+                <li><b>Web Development</b></li>
+                    <p>
+                        HTML, CSS, Node.js
+                    </p>
+                <li><b>Database Management</b></li>
+                    <p>
+                        MySQL
+            </p>
+          </div>
+
+        </div>
+            
+        {{>footer}}
+    </body>
+
 </html>

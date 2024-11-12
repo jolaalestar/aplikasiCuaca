@@ -8,7 +8,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #cce0f0; /* Latar belakang biru pastel */
+    background-image: url('/img/mountain.jpg');
     color: #445c7f; /* Warna teks */
     display: flex;
     flex-direction: column;
